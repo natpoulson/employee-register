@@ -1,13 +1,6 @@
-const Record = require('./lib/sql.js');
+const { Column, Record } = require('./lib/sql.js');
 
-console.log(Record.view("my_test_table",
-    [
-        "first_name", 
-        "last_name", 
-        "salary"
-    ],
-    {
-       "first_name":"James",
-        "last_name":"Corden"
-    }
-));
+const columns = [new Column('name'), new Column('salary', true)];
+const data = [{name:"Data Analyst", salary:"1000.20"}, {name:"Systems Administrator", salary:"1420.69"}];
+
+Record.add("roles", columns, data);
