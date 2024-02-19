@@ -27,8 +27,5 @@
     "dotenv": "^16.4.4",
     "inquirer": "^8.2.4",
     "mysql2": "^3.9.1"
-  },
-  "devDependencies": {
-    "jest": "^29.7.0"
   }
 }
